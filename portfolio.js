@@ -42,7 +42,7 @@ function toSentenceList_alt(words) {
 }
 
 
-// navbar cool style
+// navbar cool styleeee
 // const barOuter = document.querySelector(".bar-outer");
 // const options = document.querySelectorAll(".bar-grey .option");
 // let current = 1;
