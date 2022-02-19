@@ -1,27 +1,18 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 body {
-  background-image: linear-gradient(to bottom right, lightgray, white);
+  /* background-image: linear-gradient(to bottom right, lightgray, white); */
   font-family: 'Lobster', cursive, sans-serif;
   font-size: 16px;
   height: 100vh;
   margin: 0;
   padding: 0;
-}
-
-.button {
-  background-color: #3d6ded;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 18px;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  width: 120px;
+  color: #3a3837;
+  background-color: #8490c8;
+  /* background-image: url(/backgroudimg.png); */
+  
 }
 
 .card {
@@ -39,12 +30,19 @@ body {
   
 }
 
+a:visited {
+  color: #3a3837;
+}
+
+a:hover {
+  color: #fbb04c;
+}
+
 .card:hover{
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
-  
 }
 
 @keyframes gradient {
@@ -59,13 +57,43 @@ body {
 	}
 }
 
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer ul {
+  /* border: solid 5px blue; */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 0;
+  list-style:none;
+  background-color: #F8EEE1;
+}
+
+#mapArea {
+  display: inline-block;
+  justify-content: center;
+  border: solid red 10px;
+}
+
+
+
+
+
+
+
+
 
 .nav-item {
   align-self: flex-end;
-  color: #3d6ded;
+  color: #3a3837;
   font-size: 18px;
   margin: 15px;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 .page-wrapper {
@@ -76,7 +104,7 @@ body {
 }
 
 .profile-image {
-  background-color: black;
+  /* background-color: #3a3837; */
   border-radius: 50%;
   color: white;
   font-size: 32px;
@@ -98,16 +126,13 @@ nav ul  {
   justify-content: space-around;
   list-style-type: none;
   position: fixed;
-  /* border: 3px dotted yellow; */
-  width: 35rem;
+  /* border: 3px dotted red; */
+  width: 100%;
   margin: 0;
-  padding: 0;
-  background-color: aquamarine;
+  padding: 10px;
+  background-color: #F8EEE1;
 }
 
-form {
-  border: solid 1px grey;
-}
 
 #aboutText {
   width: 80%;
@@ -117,6 +142,8 @@ form {
 #contact {
   text-align: center;
   margin-top: 1.5rem;
+  border: solid  2px #899CFA;
+  display: inline-block;
 }
 
 .contact {
@@ -126,6 +153,18 @@ form {
 .complete-me {
   color: red;
 }
+
+#whoIsOren {
+  padding-top: 20px;
+  margin: 0;
+}
+
+
+
+
+
+
+
 
 
 
