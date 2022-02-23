@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Bevan:ital@1&family=Indie+Flower&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/722dac212b.js" crossorigin="anonymous"></script>
     <script src="/portfolio.js"></script>
     <title>Contact</title>
@@ -13,31 +13,32 @@
 <body onload="validateForm()">
     <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+          <li><a class="naviBar" href="/">Home</a></li>
+          <li><a class="naviBar" href="about.html">About</a></li>
+          <li><a class="naviBar" href="contact.html">Contact</a></li>
+          <li><a href="#" class="nav-item">#</a></li>
+      </ul>
       </nav>
-
-      <section>
+      <main class="mainContent">
+      <section style="margin-top: 3em;">
         <h1>LET'S CHAT</h1>
         <form id="contactForm" oninput="validateForm()">
-          <label for="fname">First name:</label><br>
-          <input class="contact" type="text" id="fname" name="fname" required><br>
-          <label for="lname">Last name:</label><br>
-          <input class="contact" type="text" id="lname" name="lname"><br>
-          <label for="email">Email:</label><br>
-          <input class="contact" type="email" id="email" name="email" required><br>
+          <label for="fname">First name :</label><br>
+          <input class="contact" type="text" id="fname" name="fname" placeholder="First name" autofocus required><br>
+          <label for="lname">Last name :</label><br>
+          <input class="contact" type="text" id="lname" name="lname" placeholder="Last name"><br>
+          <label for="email">Email :</label><br>
+          <input class="contact" type="email" id="email" name="email" placeholder="Email" required><br>
           <input type="radio" id="gender" name="gender" value="Male" required>
           <label for="male">Male</label><br>
           <input type="radio" id="gender" name="gender" value="Female">
           <label for="female">Female</label><br>
-          <label for="yourmessage">Your message:</label><br>
-          <input class="contact" type="text" id="yourmessage" name="yourmessage" required><br>
+          <label for="yourmessage">Your message :</label><br>
+          <input class="contact" type="text" id="yourmessage" name="yourmessage" placeholder="Tell me your thoughts" required><br>
           <input onclick="return formSubmit()" class="subButton" type="submit" value="Submit"></input>
         </form>
       </section>
-      
+    </main>
       <footer id="footer">
         <ul>
           <li>
@@ -58,7 +59,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div>&#169; Israel Tech Challenge</div>
+        <div>&#169; Israel Tech Challenge | This page was built using : <span id="builtWith"></span></div>
       </footer>
 </body>
 </html>
