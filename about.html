@@ -10,17 +10,17 @@
     <script src="/portfolio.js"></script>
     <title>About</title>
 </head>
-<body onload="loadInitMap()">
+<body onload="afterPloadAbout()">
     <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn-4" href="/">Home</a></li>
+          <li><a class="btn btn-1" href="about.html">About</a></li>
+          <li><a class="btn btn-2" href="contact.html">Contact</a></li>
+          <li><a class="btn btn-3" href="https://www.itc.tech/" target="blank">Visit ITC</a></li>
         </ul>
       </nav>
 
       <main class="mainContent">
-
         <section>
           <br>
           <h1 id="whoIsOren" >Who is Oren <span>&#128521;</span> </h1>
@@ -29,18 +29,14 @@
           For the past 2 years, I wanted to grow my career and my passion for the tech industry. After some research and looking for the most wanted positions the one that caught my eye was coding. That day I began experimenting and learning some code by myself, which proved harder then expected, so I decided to look-up programs for web development. That's when I found out about ITC, and I immediately knew I had to apply for the program and start making a new path in my career.<br>
           For the past 7 year I've been working at Partner. My most recent position is Tier 3 network and telephony expert, which included working with technologies and many in-house team. Amongst many of our business clients that use our service, I am the direct POC for all governmental offices in Israel such as <strong>Prime Minister's Office, IL Police, IL Prison services</strong> and many more.
         </section>
-
          <p id="mapDesc">Map Description</p> 
-
         <section class="mapArea">  
           <iframe src="" width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
-        <br>
         <div class="mapButtons">
-          <button class="previousButton" onclick="onPrev()">Previous</button>
-          <button class="nextButton" onclick="onNext()">Next</button> 
+          <button class="previousButton btn btn-5" onclick="onPrev()">Previous</button>
+          <button class="nextButton btn btn-5" onclick="onNext()">Next</button> 
         </div>
-        
       </main>
 
       <footer id="footer">
@@ -50,7 +46,7 @@
               <i class="fa-brands fa-github"></i> Github</a>
           </li>
           <li>
-            <a href="https://stackoverflow.com/" target="blank">
+            <a href="https://stackoverflow.com/users/18308054/oren-grach" target="blank">
               <i class="fa-brands fa-stack-overflow"></i> Stackoverflow</a>
           </li>
           <li>

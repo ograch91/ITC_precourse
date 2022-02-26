@@ -11,36 +11,65 @@ body {
   background-repeat: repeat-x;
 }
 
+/* variables at start for 'color transition' - https://stackoverflow.com/a/63848864/18308054 */
+@property --myColor1 {
+  syntax: '<color>';
+  initial-value: rgb(255,255,255); /* => #fff */
+  inherits: false;
+}
+@property --myColor2 {
+  syntax: '<color>';
+  initial-value: rgb(238,238,238); /* => #eee */
+  inherits: false;
+}
+@property --myColor3 {
+  syntax: '<color>';
+  initial-value: rgb(170,170,170); /* => #aaa */
+  inherits: false;
+}
+@property --myColor4 {
+  syntax: '<color>';
+  initial-value: rgb(238,238,238); /* => #eee */
+  inherits: false;
+}
+
 .card {
-  align-items: center;
-  background-image: linear-gradient(to bottom right, white, lightgray);
-  border-radius: 10px;
+  --myColor1: #fff;
+  --myColor2: #eee;
+  --myColor3: #aaa;
+  --myColor4: #eee;
+  background: linear-gradient(-45deg, var(--myColor1), var(--myColor2), var(--myColor3), var(--myColor4));
+	background-size: 400% 100%;
+	animation: gradient 5s ease infinite;
+
+  /* see above for 'color transition' - https://stackoverflow.com/a/63848864/18308054 */
+  transition: --myColor1 1s, --myColor2 1s, --myColor3 1s, --myColor4 1s;
+
   -webkit-box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 1);
   -moz-box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 1);
   box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 1);
   display: flex;
+  border-radius: 10px;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   margin: 50px;
   padding: 50px;
+  user-select: none;
 }
 
 .card:hover{
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+  --myColor1: #ee7752;
+  --myColor2: #e73c7e;
+  --myColor3: #23a6d5;
+  --myColor4: #23d5ab;
 }
 
+/* i do not know, but here !!! - https://www.gradient-animator.com/ */
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 a, a:visited {
@@ -70,7 +99,7 @@ footer ul {
 
 /* about text position */
 .mainContent {
-  width: 80%;
+  width: 81%;
   margin: 0 auto;
 }
 
@@ -125,7 +154,7 @@ nav {
 }
 
 /* for navigation bar */
-nav ul  {
+nav ul {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
@@ -133,14 +162,35 @@ nav ul  {
   /* border: 3px dotted red; */
   width: 100%;
   margin: 0;
-  padding: 10px;
+  padding: 5px;
   background-color: #F8EEE1;
+}
+
+nav ul li {
+  display: flex;
+}
+
+/* for nav buttons (1-4 are nav, 5 is for map and contact) */
+.btn {
+  padding: 5px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  width: 15rem;
+  box-shadow: 0 0 20px rgb(138 145 125);
+  border-radius: 10px;
+}
+ 
+a.btn:hover {
+  color: black;
+  text-shadow: #FAAE4B 1px 1px;
 }
 
 /* for map position */
 .mapArea {
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 /* * for map buttons */ 
@@ -153,7 +203,6 @@ nav ul  {
   border-radius: 20px;
   min-width: fit-content;
   width: 300px;
-  /* background-color: #fbb04c; */
   color:#3a3837 ;
 }
 
@@ -173,4 +222,43 @@ particle {
   pointer-events: none;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+/* for nav buttons (1-4 are nav, 5 is for map and contact) */
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+/* 1-4 are for nav */
+.btn-1 {
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+.btn-2 {
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+.btn-3 {
+  background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}
+.btn-4 {
+  background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+}
+
+/* is for map and contact */
+.btn-5 {
+  background-image: linear-gradient(to right, #f3e583 8%, #e1572a 51%, #ffeaa1 100%);
+}
+
+.btn-5:disabled {
+  background-image: linear-gradient(to right, #3e2e17 0%, #a5705e 51%, #302413 
+100%);
+  color: darkgray;
+}
+
+
+form input, form textarea {
+  margin-bottom: 12px;
+  border: 2px inset brown;
+  padding: 10px;
+  font-family: 'Bevan', cursive;
+  font-size: 0.75rem;
 }

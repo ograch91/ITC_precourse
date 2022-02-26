@@ -7,18 +7,19 @@
     <script src="https://kit.fontawesome.com/722dac212b.js" crossorigin="anonymous"></script>
     <script src="/portfolio.js"></script>
   </head>
-  <body onload="afterPload()">
+  <body onload="afterPloadIndex()">
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://www.itc.tech/" class="nav-item">Visit ITC</a></li>
+        <li><a class="btn btn-4" href="/">Home</a></li>
+        <li><a class="btn btn-1" href="about.html">About</a></li>
+        <li><a class="btn btn-2" href="contact.html">Contact</a></li>
+        <li><a class="btn btn-3" href="https://www.itc.tech/" target="blank">Visit ITC</a></li>
       </ul>
     </nav>
     <section>
       <div class="page-wrapper">
         <div class="card" data-type="shadow" onclick="pop(event)">
+          <p style="color: grey;">Click anywhere on my card!</p>
           <img
             id="profile-image"
             src="/loading.png"
@@ -35,7 +36,6 @@
           </div>
         </div>
       </div>
-      
     </section>
     
     <footer id="footer">
@@ -45,7 +45,7 @@
             <i class="fa-brands fa-github"></i> Github</a>
         </li>
         <li>
-          <a href="https://stackoverflow.com/" target="blank">
+          <a href="https://stackoverflow.com/users/18308054/oren-grach" target="blank">
             <i class="fa-brands fa-stack-overflow"></i> Stackoverflow</a>
         </li>
         <li>
@@ -61,7 +61,6 @@
       </ul>
       <div class="footerCent">&#169; Israel Tech Challenge | This page was built using : <span id="builtWith"></span></div>
     </footer>
-    
   </body>
 </html>
 

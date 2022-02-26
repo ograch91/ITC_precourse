@@ -10,15 +10,16 @@
     <script src="/portfolio.js"></script>
     <title>Contact</title>
 </head>
-<body onload="validateForm()">
+<body onload="afterPloadContact()">
     <nav>
-        <ul>
-          <li><a class="naviBar" href="/">Home</a></li>
-          <li><a class="naviBar" href="about.html">About</a></li>
-          <li><a class="naviBar" href="contact.html">Contact</a></li>
-          <li><a href="#" class="nav-item">#</a></li>
+      <ul>
+        <li><a class="btn btn-4" href="/">Home</a></li>
+        <li><a class="btn btn-1" href="about.html">About</a></li>
+        <li><a class="btn btn-2" href="contact.html">Contact</a></li>
+        <li><a class="btn btn-3" href="https://www.itc.tech/" target="blank">Visit ITC</a></li>
       </ul>
-      </nav>
+    </nav>
+
       <main class="mainContent">
       <section style="margin-top: 3em;">
         <h1>LET'S CHAT</h1>
@@ -29,16 +30,18 @@
           <input class="contact" type="text" id="lname" name="lname" placeholder="Last name"><br>
           <label for="email">Email :</label><br>
           <input class="contact" type="email" id="email" name="email" placeholder="Email" required><br>
+          <label for="gender">Gender :</label><br>
           <input type="radio" id="gender" name="gender" value="Male" required>
-          <label for="male">Male</label><br>
+          <label for="male">Male</label>
           <input type="radio" id="gender" name="gender" value="Female">
           <label for="female">Female</label><br>
           <label for="yourmessage">Your message :</label><br>
-          <input class="contact" type="text" id="yourmessage" name="yourmessage" placeholder="Tell me your thoughts" required><br>
-          <input onclick="return formSubmit()" class="subButton" type="submit" value="Submit"></input>
+          <textarea class="contact" id="yourmessage" name="yourmessage" placeholder="Tell me your thoughts" required rows="4" cols="29"></textarea><br>
+          <input onclick="return formSubmit()" class="subButton btn btn-5" type="submit" value="Submit"></textarea>
         </form>
       </section>
     </main>
+
       <footer id="footer">
         <ul>
           <li>
@@ -46,7 +49,7 @@
               <i class="fa-brands fa-github"></i> Github</a>
           </li>
           <li>
-            <a href="https://stackoverflow.com/" target="blank">
+            <a href="https://stackoverflow.com/users/18308054/oren-grach" target="blank">
               <i class="fa-brands fa-stack-overflow"></i> Stackoverflow</a>
           </li>
           <li>
