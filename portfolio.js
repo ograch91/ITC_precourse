@@ -230,7 +230,7 @@ function langsToCent(langs){
   }
 }
 
-const codingLanguages = ["HTML", "CSS", "JavaScript", "💖"];
+const codingLanguages = ["HTML", "CSS", "JavaScript", "&#128150;"];  // 💖
 function updateCentFooter() {
   let finalcent = langsToCent(codingLanguages);
   document.querySelector("#builtWith").innerHTML = finalcent;
